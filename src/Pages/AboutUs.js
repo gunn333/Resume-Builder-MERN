@@ -1,8 +1,12 @@
-import { Stack, Typography, Box } from '@mui/material';
+import {
+	Stack,
+	Typography,
+	Box,
+	Card,
+	CardContent,
+	IconButton
+} from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import { GitHub } from '@mui/icons-material';
 import Instagram from '@mui/icons-material/Instagram';
 import { Link } from 'react-router-dom';
@@ -29,7 +33,7 @@ export default function ButtonMUI() {
 					sx={{
 						fontWeight: 'bold',
 						textAlign: 'center',
-						color: '#146C94',
+						color: '#0A6847',
 						mb: 3
 					}}
 				>
@@ -99,96 +103,169 @@ export default function ButtonMUI() {
 						sx={{
 							fontWeight: '500',
 							color: '#146C94',
-							mb: 2
+							mb: 2,
+							color: '#0A6847'
 						}}
 					>
-						Kindly Share in your circle
+						Contributors
 					</Typography>
-					<Stack direction="row" spacing={3} justifyContent="center">
-						<Link
-							to="https://www.instagram.com"
-							target="_blank"
-							aria-label="Instagram"
+					<Stack
+						direction={{ xs: 'column', md: 'row' }}
+						spacing={4}
+						justifyContent="center"
+					>
+						<Card
+							sx={{
+								width: { xs: '100%', md: '45%' },
+								boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)',
+								borderRadius: '15px',
+								padding: '20px',
+								textAlign: 'center',
+								backgroundColor: '#FFEAE3',
+								transition: 'transform 0.3s, box-shadow 0.3s',
+								'&:hover': {
+									transform: 'translateY(-10px)',
+									boxShadow:
+										'0px 12px 24px rgba(0, 0, 0, 0.2)'
+								}
+							}}
 						>
-							<Instagram
-								sx={{
-									fontSize: '40px',
-									color: '#E4405F',
-									transition: 'color 0.3s',
-									'&:hover': { color: '#C13584' }
-								}}
-							/>
-						</Link>
-						<Link
-							to="https://www.facebook.com/sarveshkumar.verman"
-							target="_blank"
-							aria-label="Facebook"
+							<CardContent>
+								<Typography
+									variant="h6"
+									sx={{ color: '#0A6847', mb: 2 }}
+								>
+									Gunn Arora
+								</Typography>
+								<Stack
+									direction="row"
+									spacing={3}
+									justifyContent="center"
+								>
+									<IconButton
+										component={Link}
+										to="https://github.com/gunn333"
+										target="_blank"
+										aria-label="GitHub"
+									>
+										<GitHub
+											sx={{
+												fontSize: '40px',
+												color: '#333',
+												transition: 'color 0.3s',
+												'&:hover': { color: '#000' }
+											}}
+										/>
+									</IconButton>
+									<IconButton
+										component={Link}
+										to="https://www.linkedin.com/in/gunn-arora-3a0a9b291/"
+										target="_blank"
+										aria-label="LinkedIn"
+									>
+										<LinkedInIcon
+											sx={{
+												fontSize: '40px',
+												color: '#0077B5',
+												transition: 'color 0.3s',
+												'&:hover': { color: '#0056A0' }
+											}}
+										/>
+									</IconButton>
+									<IconButton
+										component={Link}
+										to="https://www.instagram.com/prvuni1?igsh=eXZxY3JzMWV2bnQ4"
+										target="_blank"
+										aria-label="Instagram"
+									>
+										<Instagram
+											sx={{
+												fontSize: '40px',
+												color: '#E4405F',
+												transition: 'color 0.3s',
+												'&:hover': { color: '#C13584' }
+											}}
+										/>
+									</IconButton>
+								</Stack>
+							</CardContent>
+						</Card>
+						<Card
+							sx={{
+								width: { xs: '100%', md: '45%' },
+								boxShadow: '0px 8px 16px rgba(0, 0, 0, 0.2)',
+								borderRadius: '15px',
+								padding: '20px',
+								textAlign: 'center',
+								backgroundColor: '#FFEAE3',
+								transition: 'transform 0.3s, box-shadow 0.3s',
+								'&:hover': {
+									transform: 'translateY(-10px)',
+									boxShadow:
+										'0px 12px 24px rgba(0, 0, 0, 0.2)'
+								}
+							}}
 						>
-							<FacebookOutlinedIcon
-								sx={{
-									fontSize: '40px',
-									color: '#1877F2',
-									transition: 'color 0.3s',
-									'&:hover': { color: '#0055FF' }
-								}}
-							/>
-						</Link>
-						<Link
-							to="https://www.linkedin.com/in/sarvesh-kumar-6751391a9/"
-							target="_blank"
-							aria-label="LinkedIn"
-						>
-							<LinkedInIcon
-								sx={{
-									fontSize: '40px',
-									color: '#0077B5',
-									transition: 'color 0.3s',
-									'&:hover': { color: '#0056A0' }
-								}}
-							/>
-						</Link>
-						<Link
-							to="https://web.whatsapp.com"
-							target="_blank"
-							aria-label="WhatsApp"
-						>
-							<WhatsAppIcon
-								sx={{
-									fontSize: '40px',
-									color: '#25D366',
-									transition: 'color 0.3s',
-									'&:hover': { color: '#128C7E' }
-								}}
-							/>
-						</Link>
-						<Link
-							to="https://twitter.com/home"
-							target="_blank"
-							aria-label="Twitter"
-						>
-							<TwitterIcon
-								sx={{
-									fontSize: '40px',
-									color: '#1DA1F2',
-									transition: 'color 0.3s',
-									'&:hover': { color: '#1A91DA' }
-								}}
-							/>
-						</Link>
-						<Link
-							to="https://github.com/Sarveshkumar0611"
-							target="_blank"
-							aria-label="GitHub"
-						>
-							<GitHub
-								sx={{
-									fontSize: '40px',
-									color: '#333',
-									transition: 'color 0.3s',
-									'&:hover': { color: '#000' }
-								}}
-							/>
-						</Link>
+							<CardContent>
+								<Typography
+									variant="h6"
+									sx={{ color: '#0A6847', mb: 2 }}
+								>
+									Gracy Gulati
+								</Typography>
+								<Stack
+									direction="row"
+									spacing={3}
+									justifyContent="center"
+								>
+									<IconButton
+										component={Link}
+										to="https://github.com/gracygulati7"
+										target="_blank"
+										aria-label="GitHub"
+									>
+										<GitHub
+											sx={{
+												fontSize: '40px',
+												color: '#333',
+												transition: 'color 0.3s',
+												'&:hover': { color: '#000' }
+											}}
+										/>
+									</IconButton>
+									<IconButton
+										component={Link}
+										to="https://www.linkedin.com/in/gracy-gulati-956061292/"
+										target="_blank"
+										aria-label="LinkedIn"
+									>
+										<LinkedInIcon
+											sx={{
+												fontSize: '40px',
+												color: '#0077B5',
+												transition: 'color 0.3s',
+												'&:hover': { color: '#0056A0' }
+											}}
+										/>
+									</IconButton>
+									<IconButton
+										component={Link}
+										to="https://www.instagram.com/gracy_gulati?igsh=ajJyNDdlNzIxN3dk"
+										target="_blank"
+										aria-label="Instagram"
+									>
+										<Instagram
+											sx={{
+												fontSize: '40px',
+												color: '#E4405F',
+												transition: 'color 0.3s',
+												'&:hover': { color: '#C13584' }
+											}}
+										/>
+									</IconButton>
+								</Stack>
+							</CardContent>
+						</Card>
 					</Stack>
 				</Box>
 			</Stack>
