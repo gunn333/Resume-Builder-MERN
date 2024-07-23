@@ -29,9 +29,12 @@ const Home = props => {
 			<div className="home-container">
 				<div className="home">
 					<div className="home-templates-cont">
-						<h2 className="template-header-title">Templates</h2>
+						<h2 className="template-header-title">
+							Explore Templates
+						</h2>
 						<p className="template-select-text">
-							Select a template to start building your resume
+							Choose a template to start building your
+							professional resume
 						</p>
 
 						<Stack
@@ -47,35 +50,30 @@ const Home = props => {
 								gridGap: '30px'
 							}}
 						>
-							{templates.map(template => {
-								return (
-									<Box
-										key={template.id}
-										id="template"
-										className="templates-img-cont"
+							{templates.map(template => (
+								<Box
+									key={template.id}
+									className="templates-img-cont"
+								>
+									<img
+										className="template-img"
+										src={template.template_img}
+										alt={template.template_name}
+									/>
+									<ScreenDarkComponent />
+									<Button
+										className="use-template-btn"
+										onClick={() =>
+											navigateToFillDetails(template.id)
+										}
+										size="medium"
+										variant="contained"
+										color="primary"
 									>
-										<img
-											className="template-img"
-											src={template.template_img}
-											alt={template.template_name}
-										/>
-										<ScreenDarkComponent />
-										<Button
-											className="use-template-btn"
-											onClick={() =>
-												navigateToFillDetails(
-													template.id
-												)
-											}
-											size="medium"
-											variant="contained"
-											color="secondary"
-										>
-											Select Template
-										</Button>
-									</Box>
-								);
-							})}
+										Choose This Template
+									</Button>
+								</Box>
+							))}
 						</Stack>
 					</div>
 				</div>

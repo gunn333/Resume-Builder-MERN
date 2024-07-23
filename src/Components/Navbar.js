@@ -16,7 +16,7 @@ const drawerWidth = 240;
 const logoTheme = createTheme({
 	palette: {
 		primary: {
-			main: '#fff'
+			main: '#ffffff'
 		}
 	}
 });
@@ -32,11 +32,10 @@ function Navbar(props) {
 		<Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
 			<Typography variant="h6" sx={{ my: 2 }}>
 				<NavLink to="/">
-					{' '}
 					<img
-						src="https://www.almabetter.com/_next/image?url=https%3A%2F%2Falmablog-media.s3.ap-south-1.amazonaws.com%2Flogo1_edfc81b31b.png&w=256&q=75"
+						src="https://your-new-logo-url.com/logo.png"
 						height="30px"
-						alt="AlmaBetter"
+						alt="ResumeBuilder"
 					/>
 				</NavLink>
 			</Typography>
@@ -57,7 +56,7 @@ function Navbar(props) {
 					My Resumes
 				</NavLink>
 				<NavLink to="/about-us" color="inherit" className="nav-link">
-					About us
+					About Us
 				</NavLink>
 			</List>
 		</Box>
@@ -91,17 +90,10 @@ function Navbar(props) {
 									flexGrow: 1,
 									display: { sm: 'block' },
 									fontSize: '25px',
-									position: 'relative',
-									top: '5px'
+									color: '#333'
 								}}
 							>
 								<NavLink to="/" className="homeIcon">
-									{/* <img
-                    src="https://www.almabetter.com/_next/image?url=https%3A%2F%2Falmablog-media.s3.ap-south-1.amazonaws.com%2Flogo1_edfc81b31b.png&w=256&q=75"
-                    height="50px"
-                    alt="Alma Better"
-                  /> */}
-
 									<h4>ResumeBuilder</h4>
 								</NavLink>
 							</Typography>

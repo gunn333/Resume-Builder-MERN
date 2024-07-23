@@ -3,8 +3,8 @@
 }
 
 .MuiPaper-root.MuiAppBar-root {
-  background-color: lightskyblue;
-  box-shadow: 0px 0px 8px 4px rgb(228, 228, 228);
+  background-color: #004d40;
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -21,9 +21,8 @@
 .homeIcon h4{
   font-size: 2rem;
   width: max-content;
-  color: rgb(70, 70, 70);
+  color: #ffffff;
 }
-
 
 .nav-links {
   display: flex;
@@ -32,15 +31,15 @@
 }
 
 .nav-link {
-  font-size: 25px;
-  color: black;
+  font-size: 20px;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
-  margin-right: 40px;
+  margin-right: 30px;
 }
 
 .nav-link:hover {
-  color: whitesmoke;
+  color: #cfd8dc;
 }
 
 .drawerLinks a {
@@ -48,7 +47,7 @@
 }
 
 .active {
-  color: whitesmoke;
+  color: #cfd8dc;
   text-decoration: none;
 }
 
@@ -58,6 +57,7 @@
   justify-content: space-between;
   height: 78px;
 }
+
 @media screen and (min-width: 600px) and (max-width: 640px) {
   .aboutUs{
     margin-right: 0px !important;

@@ -1,12 +1,15 @@
 import './Styles/MyResumes.css';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Button, Box } from '@mui/material';
+import { Button, Box, Tooltip } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import JsPDF from 'jspdf';
 import Grid from '@mui/material/Grid';
 import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
+import DownloadIcon from '@mui/icons-material/Download';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 import { connect } from 'react-redux';
 import { templates } from '../Utils/Data/templates';
 import { Navbar, ScreenDarkComponent } from './';
@@ -23,9 +26,15 @@ import {
 const Item = styled(Paper)(({ theme }) => ({
 	backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
 	...theme.typography.body2,
-	padding: theme.spacing(1),
+	padding: theme.spacing(2),
 	textAlign: 'center',
-	color: theme.palette.text.secondary
+	color: theme.palette.text.secondary,
+	boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+	transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+	'&:hover': {
+		transform: 'translateY(-5px)',
+		boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)'
+	}
 }));
 
 const StatetoProps = state => ({
@@ -132,38 +141,57 @@ const MyResumes = props => {
 											{getTemplate(resume, index)}
 											<ScreenDarkComponent />
 											<div className="use-template-btn-cont">
-												<Button
-													className="use-template-btn"
-													onClick={() => {
-														downloadResume(index);
-													}}
-													size="medium"
-													variant="contained"
-												>
-													Download
-												</Button>
-												<Button
-													className="use-template-btn"
-													onClick={() => {
-														deleteResume(resume);
-													}}
-													size="medium"
-													variant="contained"
-												>
-													Delete
-												</Button>
-												<Button
-													className="use-template-btn"
-													onClick={() =>
-														navigateToFillDetails(
-															resume
-														)
-													}
-													size="medium"
-													variant="contained"
-												>
-													Edit Template
-												</Button>
+												<Tooltip title="Download Resume">
+													<Button
+														className="use-template-btn"
+														onClick={() => {
+															downloadResume(
+																index
+															);
+														}}
+														size="medium"
+														variant="contained"
+														startIcon={
+															<DownloadIcon />
+														}
+													>
+														Download
+													</Button>
+												</Tooltip>
+												<Tooltip title="Delete Resume">
+													<Button
+														className="use-template-btn"
+														onClick={() => {
+															deleteResume(
+																resume
+															);
+														}}
+														size="medium"
+														variant="contained"
+														startIcon={
+															<DeleteIcon />
+														}
+														color="error"
+													>
+														Delete
+													</Button>
+												</Tooltip>
+												<Tooltip title="Edit Resume">
+													<Button
+														className="use-template-btn"
+														onClick={() =>
+															navigateToFillDetails(
+																resume
+															)
+														}
+														size="medium"
+														variant="contained"
+														startIcon={<EditIcon />}
+														color="primary"
+													>
+														Edit
+													</Button>
+												</Tooltip>
 											</div>
 										</Item>
 									</Grid>
