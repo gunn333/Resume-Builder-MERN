@@ -102,7 +102,6 @@ export default function ButtonMUI() {
 						variant="h5"
 						sx={{
 							fontWeight: '500',
-							color: '#146C94',
 							mb: 2,
 							color: '#0A6847'
 						}}
