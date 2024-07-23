@@ -8,129 +8,188 @@ import Instagram from '@mui/icons-material/Instagram';
 import { Link } from 'react-router-dom';
 import { Navbar } from './';
 import aboutCV from '../Utils/Images/aboutCV.jpg';
-// An overview of the website
 
 export default function ButtonMUI() {
 	return (
 		<>
 			<Navbar />
-			<Stack p={{ xs: '15px', sm: '25px', md: '40px', lg: '60px ' }}>
-				<h2 className="template-header-title">Resume-Builder</h2>
-				<Stack
-					className="midContainer"
-					direction={{
-						xs: 'column-reverse',
-						sm: 'column-reverse',
-						md: 'column-reverse',
-						lg: 'row'
+			<Stack
+				p={{ xs: '15px', sm: '20px', md: '30px', lg: '40px' }}
+				spacing={4}
+				sx={{
+					backgroundColor: '#F6F1F1',
+					minHeight: 'calc(100vh - 64px)',
+					display: 'flex',
+					flexDirection: 'column',
+					justifyContent: 'center'
+				}}
+			>
+				<Typography
+					variant="h3"
+					sx={{
+						fontWeight: 'bold',
+						textAlign: 'center',
+						color: '#146C94',
+						mb: 3
 					}}
-					spacing={{ xs: 1, sm: 2, md: 4 }}
-					mt="20px"
 				>
-					<Typography
+					ResumeBuilder
+				</Typography>
+				<Stack
+					direction={{ xs: 'column', md: 'row' }}
+					spacing={{ xs: 2, md: 4 }}
+					alignItems="center"
+					justifyContent="center"
+				>
+					<Box
 						sx={{
-							fontSize: {
-								xs: '13px',
-								sm: '15px',
-								md: '17px',
-								lg: '19px'
-							},
-							paddingRight: {
-								xs: '15px',
-								sm: '18px',
-								lg: '25px'
-							},
-							textAlign: 'justify'
+							width: { xs: '100%', md: '50%' },
+							textAlign: 'center',
+							padding: { xs: '10px', md: '20px' }
 						}}
 					>
-						Resume Building made easy and efficient.
-						<br />
-						ResumeBuilder offers a time-saving solution for crafting
-						professional resumes with ease. With ResumeBuilder, you
-						can effortlessly create a standout resume, potentially
-						increasing your chances of securing your dream job.
-						Choose from a selection of templates that best suit your
-						needs, add a high-quality profile picture, input your
-						qualifications and work experience, and instantly
-						generate a polished resume. It's as straightforward as
-						that, eliminating the need for extensive time and effort
-						in the resume-building process. Additionally, access
-						your previously created resumes at any time through the
-						convenient "My Resumes" tab. We wish you success in
-						achieving your aspirations and securing your dream job.
-						Best of luck on your journey!
-					</Typography>
-					<Stack
+						<Typography
+							sx={{
+								fontSize: {
+									xs: '16px',
+									md: '18px',
+									lg: '20px'
+								},
+								lineHeight: 1.6,
+								color: '#333'
+							}}
+						>
+							ResumeBuilding made easy and efficient. With
+							ResumeBuilder, you can effortlessly create a
+							standout resume with ease. Choose from templates,
+							add a profile picture, input qualifications and work
+							experience, and generate a polished resume
+							instantly. Access your created resumes anytime
+							through the "My Resumes" tab.
+						</Typography>
+					</Box>
+					<Box
 						sx={{
-							width: '30%',
-							placeSelf: 'center'
+							width: { xs: '100%', md: '50%' },
+							textAlign: 'center',
+							padding: { xs: '10px', md: '20px' }
 						}}
 					>
 						<img
-							src="https://p2.hiclipart.com/preview/922/970/349/teamwork-icon-job-resume-icon-leader-icon-mobilewash-oman-chamber-of-commerce-and-industry-trade-car-wash-service-gold-png-clipart.png"
-							alt="img"
-							style={{ height: '250px', width: '250px' }}
+							src={aboutCV}
+							alt="Resume Builder"
+							style={{
+								width: '100%',
+								maxWidth: '400px',
+								height: 'auto',
+								borderRadius: '10px',
+								boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.2)'
+							}}
 						/>
-					</Stack>
+					</Box>
 				</Stack>
-				<Box mt="25px">
+				<Box
+					sx={{
+						textAlign: 'center',
+						mt: 4
+					}}
+				>
 					<Typography
+						variant="h5"
 						sx={{
-							fontSize: {
-								xs: '22px',
-								sm: '25px',
-								md: '27px',
-								lg: '30px'
-							},
-							fontWeight: '400',
-							color: 'dark'
+							fontWeight: '500',
+							color: '#146C94',
+							mb: 2
 						}}
 					>
 						Kindly Share in your circle
 					</Typography>
-					<Box className="icons">
-						<Link to="https://www.instagram.com">
+					<Stack direction="row" spacing={3} justifyContent="center">
+						<Link
+							to="https://www.instagram.com"
+							target="_blank"
+							aria-label="Instagram"
+						>
 							<Instagram
-								sx={{ fontSize: '40px', paddingLeft: '15px' }}
-								color="error"
-							/>
-						</Link>
-
-						<Link to="https://www.facebook.com/sarveshkumar.verman">
-							<FacebookOutlinedIcon
-								sx={{ fontSize: '40px', paddingLeft: '15px' }}
-								color="primary"
-							/>
-						</Link>
-
-						<Link to="https://www.linkedin.com/in/sarvesh-kumar-6751391a9/">
-							<LinkedInIcon
-								sx={{ fontSize: '40px', paddingLeft: '15px' }}
-								color="primary"
-							/>
-						</Link>
-						<Link to="https://web.whatsapp.com">
-							<WhatsAppIcon
-								sx={{ fontSize: '40px', paddingLeft: '15px' }}
-								color="success"
-							/>
-						</Link>
-						<Link to="https://twitter.com/home">
-							<TwitterIcon
-								sx={{ fontSize: '40px', paddingLeft: '15px' }}
-								color="info"
-							/>
-						</Link>
-						<Link to="https://github.com/Sarveshkumar0611">
-							<GitHub
 								sx={{
 									fontSize: '40px',
-									paddingLeft: '15px',
-									color: 'black'
+									color: '#E4405F',
+									transition: 'color 0.3s',
+									'&:hover': { color: '#C13584' }
 								}}
 							/>
 						</Link>
-					</Box>
+						<Link
+							to="https://www.facebook.com/sarveshkumar.verman"
+							target="_blank"
+							aria-label="Facebook"
+						>
+							<FacebookOutlinedIcon
+								sx={{
+									fontSize: '40px',
+									color: '#1877F2',
+									transition: 'color 0.3s',
+									'&:hover': { color: '#0055FF' }
+								}}
+							/>
+						</Link>
+						<Link
+							to="https://www.linkedin.com/in/sarvesh-kumar-6751391a9/"
+							target="_blank"
+							aria-label="LinkedIn"
+						>
+							<LinkedInIcon
+								sx={{
+									fontSize: '40px',
+									color: '#0077B5',
+									transition: 'color 0.3s',
+									'&:hover': { color: '#0056A0' }
+								}}
+							/>
+						</Link>
+						<Link
+							to="https://web.whatsapp.com"
+							target="_blank"
+							aria-label="WhatsApp"
+						>
+							<WhatsAppIcon
+								sx={{
+									fontSize: '40px',
+									color: '#25D366',
+									transition: 'color 0.3s',
+									'&:hover': { color: '#128C7E' }
+								}}
+							/>
+						</Link>
+						<Link
+							to="https://twitter.com/home"
+							target="_blank"
+							aria-label="Twitter"
+						>
+							<TwitterIcon
+								sx={{
+									fontSize: '40px',
+									color: '#1DA1F2',
+									transition: 'color 0.3s',
+									'&:hover': { color: '#1A91DA' }
+								}}
+							/>
+						</Link>
+						<Link
+							to="https://github.com/Sarveshkumar0611"
+							target="_blank"
+							aria-label="GitHub"
+						>
+							<GitHub
+								sx={{
+									fontSize: '40px',
+									color: '#333',
+									transition: 'color 0.3s',
+									'&:hover': { color: '#000' }
+								}}
+							/>
+						</Link>
+					</Stack>
 				</Box>
 			</Stack>
 		</>
