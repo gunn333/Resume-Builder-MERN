@@ -21,71 +21,65 @@ const Home = props => {
 		props.setSelectedTemplateId(id);
 		navigate('/template/fill-details');
 	};
-	//setting the navbar active link to identify on which page user is at.
 
 	return (
 		<>
 			<Navbar active={'Resume Templates'} />
 
-			<>
-				<div className="home-container">
-					<div className="home">
-						<div className="home-templates-cont">
-							<h2 className="template-header-title">Templates</h2>
-							<h3>
-								<p className="template-select-text">
-									Select templates
-								</p>
-							</h3>
+			<div className="home-container">
+				<div className="home">
+					<div className="home-templates-cont">
+						<h2 className="template-header-title">Templates</h2>
+						<p className="template-select-text">
+							Select a template to start building your resume
+						</p>
 
-							<Stack
-								sx={{
-									width: '100%',
-									display: 'grid',
-									gridTemplateColumns: {
-										sm: '1fr 1fr',
-										md: '1fr 1fr',
-										lg: '1fr 1fr 1fr',
-										xl: '1fr 1fr 1fr 1fr'
-									},
-									gridGap: '30px'
-								}}
-							>
-								{templates.map(template => {
-									return (
-										<Box
-											key={template.id}
-											id="template"
-											className="templates-img-cont"
+						<Stack
+							sx={{
+								width: '100%',
+								display: 'grid',
+								gridTemplateColumns: {
+									sm: '1fr 1fr',
+									md: '1fr 1fr',
+									lg: '1fr 1fr 1fr',
+									xl: '1fr 1fr 1fr 1fr'
+								},
+								gridGap: '30px'
+							}}
+						>
+							{templates.map(template => {
+								return (
+									<Box
+										key={template.id}
+										id="template"
+										className="templates-img-cont"
+									>
+										<img
+											className="template-img"
+											src={template.template_img}
+											alt={template.template_name}
+										/>
+										<ScreenDarkComponent />
+										<Button
+											className="use-template-btn"
+											onClick={() =>
+												navigateToFillDetails(
+													template.id
+												)
+											}
+											size="medium"
+											variant="contained"
+											color="secondary"
 										>
-											<img
-												style={{ width: '75%' }}
-												className="template-img"
-												src={template.template_img}
-												alt={template.template_name}
-											/>
-											<ScreenDarkComponent />
-											<Button
-												className="use-template-btn"
-												onClick={() =>
-													navigateToFillDetails(
-														template.id
-													)
-												}
-												size="medium"
-												variant="contained"
-												color="secondary"
-											>
-												Select Template
-											</Button>
-										</Box>
-									);
-								})}
-							</Stack>
-						</div>
+											Select Template
+										</Button>
+									</Box>
+								);
+							})}
+						</Stack>
 					</div>
 				</div>
-			</>
+			</div>
 		</>
 	);
 };
