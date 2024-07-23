@@ -6,7 +6,6 @@ import { connect } from "react-redux";
 import { addAllExperience, addExperience } from "../Redux/Actions/actions";
 import {BackNextButton,SelectComponent,Input} from "../Pages/index";
 
-//mapStateToProps is used for selecting the part of the data from the store that the connected component needs
 const mapStatetoProps = (state) => ({
   experiences: state.workExperienceReducer.experiences,
 });
