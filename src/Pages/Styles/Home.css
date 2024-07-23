@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #F6F1F1;
     color: #333;
 }
 
@@ -20,7 +20,7 @@ body {
 }
 
 .home {
-    background-color: #ffffff;
+    background-color: #AFD3E2;
     width: 90%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -44,7 +44,7 @@ body {
 .template-header-title {
     font-size: 36px;
     font-weight: bold;
-    color: #007bff;
+    color: #146C94;
     margin-bottom: 10px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
 }
@@ -84,7 +84,7 @@ body {
     z-index: 5;
     visibility: hidden;
     text-transform: capitalize;
-    background-color: #007bff;
+    background-color: #19A7CE;
     color: white;
     transition: background-color 0.3s, visibility 0.3s;
 }
@@ -94,7 +94,7 @@ body {
 }
 
 .MuiButtonBase-root.MuiButton-root.use-template-btn:hover {
-    background-color: #0056b3;
+    background-color: #19A7CE;
 }
 
 .homeInfoWrapper .grid {
