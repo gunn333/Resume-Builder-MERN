@@ -48,38 +48,9 @@ Ensure you have the following installed:
 
    The app should now be running at `http://localhost:3000`.
 
-### Configuration
-
-1. **Set Up Environment Variables:**
-
-   Create a `.env` file in the root directory and add your MongoDB connection string:
-
-   ```env
-   MONGO_URI=your_mongodb_connection_string
-   ```
-
-2. **Start the Backend Server:**
-
-   In a separate terminal, navigate to the `backend` directory and start the server:
-
-   ```bash
-   cd backend
-   npm install
-   npm start
-   ```
-
-   The backend server should now be running at `http://localhost:5000`.
-
 ## 🔗 Live Deployment
 
-You can explore the live version of our project here: [Live Deployment](https://lnkd.in/gzwFFg-3)
-
-## 📂 Repository Structure
-
-- `frontend/` - Contains the React frontend application.
-- `backend/` - Contains the Node.js and Express backend server.
-- `models/` - Mongoose models for MongoDB.
-- `routes/` - Express routes for API endpoints.
+You can explore the live version of our project here: [Live Deployment](https://669fc8c735c12f0008d23a03--resumebuilder-zidio.netlify.app/)
 
 ## 🤝 Contributing
 
